@@ -1,0 +1,49 @@
+1> str(string):
+    it can store data in string form. eg- name="avi pandey"
+    it can store the numeric data. eg- age="18"
+    it can store the decimal no. eg-precentage ="85.9"
+    
+    typecasting
+    to convet one datatype ot another datatype
+    eg.
+       something we need to purchase in float we paid in integer
+       code{
+       purchaseItemPrice=90.82
+       paidItemsPrice=int(purchaseItemPrice)
+       print("paid amount is", paidItemsPrice)
+       }
+       2> to get the input from using input() fumction
+       code
+       {
+        collegeName= input("enter your college name")
+        collegeFee=input("enter your college fee")
+        print("My college name is "+collegeName+ collegeFee)
+               }
+        the input function has defualt return type str
+        code{
+            collegefee=collegeFee-25000
+            print("After scholarship my fees",collegeFee)
+        }
+        question 1>
+        Find the age of in year when bornYear and currentYear given by user
+CONDITIONAL STATMENT
+it will check that the conditional isn true or not
+to check condition we use 'if' and 'else'.
+LOOPS 
+For loop is used to no. of itetration 
+code
+{
+username="Avi Pandey"
+for x in username:
+print(x)
+}
+WHILE LOOPS
+while loop is used to preform itetration
+until the condition will be false
+FUNCTION 
+function can perform any task, it can be reused, it will return the result
+code{
+    def printName():
+        print("Enter your name")
+    printName()
+}
