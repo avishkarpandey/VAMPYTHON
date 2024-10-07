@@ -19,3 +19,7 @@ While LOOPS
 FUNCTION
 16> create a function to concat fname and lname
 17> find the area of square using function
+18> add the 5 fav city name in list, add my fab city kasol in list 0, remove the city in list using pop, sorting the list data, print the list data
+19> wap to check weather the keyword is present in file or not
+20> Create read write delete csv, exce, json, txt 
+21> wap to find the monthly salary of the user using function

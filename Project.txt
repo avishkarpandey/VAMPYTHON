@@ -1,0 +1,4 @@
+1> Generate 6 digit random OTP.
+2> WAP to convert dollar into rupees and vice versa.
+3> WAP to find the age when bithyear is given.
+

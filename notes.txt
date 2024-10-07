@@ -1,22 +1,22 @@
 1> str(string):
-    it can store data in string form. eg- name="avi pandey"
-    it can store the numeric data. eg- age="18"
-    it can store the decimal no. eg-precentage ="85.9"
+    it can store data in string form. eg- name = "avi pandey"
+    it can store the numeric data. eg- age = "18"
+    it can store the decimal no. eg-precentage = "85.9"
     
     typecasting
-    to convet one datatype ot another datatype
+    to convet one datatype to another datatype
     eg.
        something we need to purchase in float we paid in integer
        code{
-       purchaseItemPrice=90.82
-       paidItemsPrice=int(purchaseItemPrice)
+       purchaseItemPrice = 90.82
+       paidItemsPrice = int(purchaseItemPrice)
        print("paid amount is", paidItemsPrice)
        }
-       2> to get the input from using input() fumction
+       2> to get the input from using input() function
        code
        {
-        collegeName= input("enter your college name")
-        collegeFee=input("enter your college fee")
+        collegeName = input("enter your college name")
+        collegeFee = int(input("enter your college fee"))
         print("My college name is "+collegeName+ collegeFee)
                }
         the input function has defualt return type str
@@ -26,10 +26,14 @@
         }
         question 1>
         Find the age of in year when bornYear and currentYear given by user
+
 CONDITIONAL STATMENT
+
 it will check that the conditional isn true or not
 to check condition we use 'if' and 'else'.
+
 LOOPS 
+
 For loop is used to no. of itetration 
 code
 {
@@ -37,7 +41,9 @@ username="Avi Pandey"
 for x in username:
 print(x)
 }
+
 WHILE LOOPS
+
 while loop is used to preform itetration
 until the condition will be false
 FUNCTION 
@@ -47,3 +53,225 @@ code{
         print("Enter your name")
     printName()
 }
+
+LIST 
+
+it can store multiple data, data can be different type like int, str....
+list can store dublicate data set - shorting assending decending
+
+create a list and store the your friends name 
+CODE
+{
+    firendlist = ["frnd1", "frnd2", "frnd3"]
+    #print the list of friendname
+    print(friendlist)
+    friendlist.append("frnd4")
+    print(friendlist)
+    
+}
+add the data into list using index no
+friendlist.insert(0, "Avi")
+print(friendlist)
+to access the data using index no 
+print(friendlist[2])
+
+list in  python 
+list store multiple data 
+myList = ["frnd1","frnd2" , "frnd3"]
+
+tuple store multiple data 
+myTuple = ("frnd1","frnd2" , "frnd3")
+
+set store multilpe data 
+mySet = {"frnd1","frnd2" , "frnd3"}
+
+disctionary store multiple data in key value pair 
+myDict={"Name": "Kshitij","Email": "p@gmail.com"}
+
+To check the data type of all above data set
+print("List:",type(mylist),"Tuple",type(myTuple))
+print("Set:",type (myset),"Dict:",type(myDict))
+#how to Idetify list set tuple and dictionary
+
+#list [],Tuple(), set{},dict{:}
+
+#Example of data set
+
+myset={"Pawan","Kshitij","Harshit"}
+mytuple=("Pawan","Kshitij","Harshit")
+myList=["Pawan","Kshitij","Harshit"]
+mydict ={"Name":"Kshitij","age":20}
+
+ACCESS FROM DATA SET 
+print("list:", myList[0], "set:", myset)
+print("tuple:", mytuple[0], "dict:", mydict["Name"] )
+
+ACCESS COMPLETE DATA FROM SET
+for x in myList:
+    print("list", x)
+for x in mytuple:
+    print("tuple", x)
+for x in myList:
+    print("set", x)
+for x in mydict.values:
+    print("dict", x)
+-->>Only truple and list can takes duplicate values
+-->>LIST, DICTONARY CAN BE UPDATED 
+-->>TUPLE, SET IS UNCHANGABLE 
+myList[0] = "avi"
+print(myList)
+mydict["NAME"] = "avi"
+print(mydict)
+ 
+ ADD NEW VALUE IN DATA SET 
+
+myList.append("PANDEY")
+myset.add("PANDEY")
+mydict.update({"Name":"PANDEY"})
+
+TO REMOVE THE DATA FROM  DATA SET 
+
+mydict.pop("Name")
+myList.pop(0)
+myset.remove("PANDEY")
+
+TO CONVET TUPLE IN LIST 
+
+convertlist = list(mytuple)
+print(type(convertlist))
+convertlist.append("avishkar")
+print(convertlist)
+convertlist.pop(2)
+print(convertlist)
+qwe=tuple(convertlist)
+print(type(qwe))
+--------------------------------------------------
+--------------------------------------------------
+FILE HANDLING 
+Work on the file
+
+CREATE FILE 
+syntax 
+variableName = open("filename", "filenode")
+eg-
+mylaptopPassword=open("psssword.txt", "w")
+
+WRITE FILE
+
+syntax
+variableName.write("contant")
+eg-
+mylaptopPassword.write("avishkar")
+
+READ FROM FILE 
+-->to read a file you need to open the file in reading mode
+syntax
+variableName.read()
+eg- 
+mylaptopPassword.read()
+
+DELETE FILE
+-->to delete a file you need to close the file first
+syntax
+mypassword.close()
+import os
+os.remove("filename.extemion")
+eg-
+import os
+os.remove("password.txt")
+--------------------------------------------
+#to  create a file 
+mypassword = open("firstname.txt", "w")
+#to write in the file
+mypassword.write("my name = avi")
+mypassword.write(input("enter a new password"))
+# read a file
+mypassword = open("firstname.txt", "r")
+print(mypassword.read())
+#delete a file
+mypassword.close()
+import os
+os.remove("firstname.txt")
+----------------------------------------------
+----------------------------------------------
+ERROR HANDLING OR EXPECTION HANDLING
+
+CONTROL OVER THE ERROR IN PROGRAM 
+#1Name Error
+
+#print(x)
+
+#solution 
+try :
+    print(x)
+except NameError:
+    print("x is not defined")
+-------------------------------------------
+# 2 ZeroDivisionError
+
+# y = 1/0
+
+ try: 
+     y = 1/0
+ except ZeroDivisionError:
+     print("divide by zero error")
+---------------------------------------
+#3 ValueError
+
+name = "avishkar"
+# num = int(name)
+
+try:
+    num = int(name)
+except ValueError:
+    print("A string cannot be converted into integer")
+---------------------------------------------------------------
+#4 IndexError
+friends = ["frnd1", "frnd2","frnd3"]
+# friends[4]
+
+try:
+    friends[4]
+except IndexError:
+    print("You are calling wring index")
+-----------------------------------------------------------
+#5 TypeError
+
+amount = 400
+email = "p@mail.com"
+#total = amount + email
+
+try:
+    total = amount + email
+except TypeError:
+    print("String cannot be concatenated with integer")
+------------------------------------------------------------
+------------------------------------------------------------
+OOPS IN PYTHON 
+Object oriented programming structure
+CLASS- it os a container which collection variables, functions
+Example--> avi CLASS
+avi.fullname = "avishkarpandey"
+avi.age = 19
+avi.sleeping()
+avi.eating()
+avi.watching()
+CLASS syntax:
+class ClassName:
+    statement
+ex-
+class ClassName:
+    print("This is my class")
+#creating a class
+class Avi:
+    age = 19
+    fullName = "Avishkar Pandey"
+    email = "avishkarpandey@gmail.com"
+    def pocketmoney(this,amount):
+        print("My pocketmoney is",amount)
+#create class object
+avi:Avi = Avi()
+print(avi.fullName)
+print(avi.age)
+print(avi.email)
+avi.pocketmoney(12000)
