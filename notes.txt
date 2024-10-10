@@ -277,6 +277,11 @@ print(avi.email)
 avi.pocketmoney(12000)
 -----------------------------------
 -----------------------------------
+Different types file 
+Numpy--> create dataset
+Pandas-->represent dataset(changes)/manipulate dataset
+Matplotlib-->show in grapy
+------------------------------------------
 NUMPY IN PYTHON
 NumPy is a library for the Python programming language, adding support for large, multi-dimensional arrays.
 import numpy as np
@@ -318,4 +323,39 @@ y = 3
 while y>=0:
     print(myFriends[y])
     y = y - 1
-    
+--------------------------------------------------------------------------
+#Types of Graph
+#show data in graph-line(x,y), pie(x), bar(x,y), scatters(x,y)
+
+#Making a line graph
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+years = np.array([2021, 2022, 2023, 2024])
+grades = np.array([61, 65, 64, 74])
+
+#Repersenting a line graph
+plt.plot(years, grades, marker = 'o')
+
+#to add title to the graph
+plt.title("Academic Growth")
+
+#set the name for x, y axis
+plt.xlabel("Passing Years")
+plt.ylabel("Student Marks")
+plt.show()
+--------------------------------------------------------
+#Making a Pie graph
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+trendingLangName = np.array(["Python", "Javascript", "Java", "C@"])
+trendinglang = np.array([45, 30, 20, 5])
+plt.title("Trending Language Marketplace")
+plt.pie(trendinglang)
+
+#for giving scale to the graph
+plt.legend(trendingLangName)
+plt.show()

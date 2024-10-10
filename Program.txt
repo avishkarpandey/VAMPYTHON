@@ -23,3 +23,5 @@ FUNCTION
 19> wap to check weather the keyword is present in file or not
 20> Create read write delete csv, exce, json, txt 
 21> wap to find the monthly salary of the user using function
+22> wap to create a graph of of showing the sales of jio 5years
+
