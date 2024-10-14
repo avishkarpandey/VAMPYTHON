@@ -395,4 +395,3 @@ print(myDataFrame) #print arrya with index value
 print( myDataFrame.head(1)) #print the  first() row of the array
 print( myDataFrame.tail(2))  #print the last() row of the array
 print( myDataFrame.loc[[2,3,4,5]])  #print the rows which are selected 
-
