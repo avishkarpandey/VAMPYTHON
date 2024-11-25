@@ -1,0 +1,27 @@
+DATA ANALITYCS
+-----------------------------------------
+import matplotlib.pyplot as plt
+from scipy import stats as st
+import numpy as np
+
+age = [20, 30, 40, 50, 60]
+salary = [20000, 75000, 55000, 60000, 25000]
+# plt.scatter(age, salary)
+# plt.title('Scatter Graph of Age vs Salary')
+# plt.xlabel('Age')
+# plt.ylabel('Salary')
+# plt.show()
+--------------------------------------------------------
+# # leanier regression
+
+# slope, intercept, r, p, std_err = st.linregress(age, salary)
+# print("slope",slope, "intercept", intercept, "r", r, "p", p, "std_err", std_err)
+# def futureSalary(age):
+#     return slope * age + intercept
+# print(futureSalary(35))
+---------------------------------------------------------------
+# Polynomial regression
+
+from sklearn.metrics import r2_score
+futureData = np.poly1d(np.polyfit(age, salary, 30))
+print(futureData)
