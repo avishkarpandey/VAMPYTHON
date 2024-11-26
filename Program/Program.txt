@@ -26,3 +26,4 @@ FUNCTION
 22> wap to create a graph of of showing the sales of jio 5years
 23> create an arrya start from 0 to 49
 24>create 1 million employees using numpy
+25>Find the profit revenue of 2025 of given brands Amazon

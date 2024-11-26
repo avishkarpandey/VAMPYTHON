@@ -1,12 +1,14 @@
 import matplotlib.pyplot as plt
-from scipy import stats as st
-import numpy as np
-
-age = [20, 30, 40, 50, 60]
-salary = [20000, 75000, 55000, 60000, 25000]
-
-from sklearn.metrics import r2_score
-futureData = np.poly1d(np.polyfit(age, salary, 3))
-print(r2_score,salary, futureData(35))
-
-
+from sklearn.cluster import KMeans
+age  = [60, 50, 40, 30, 20]
+salary = [15000, 20000, 25000, 30000, 35000]
+# plt.scatter(age, salary, marker = 'o')
+# plt.show()
+data = list(zip(age, salary))
+blank_array = []
+for  mydata in range(1,6):
+    Kmeans = KMeans(n_clusters = mydata)
+    Kmeans.fit(data)
+    blank_array.append(Kmeans.inertia_)
+plt.plot(range(1,6), blank_array, marker = 'o')
+plt.show()
